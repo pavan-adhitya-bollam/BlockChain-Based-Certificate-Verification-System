@@ -1,0 +1,21 @@
+{
+  "name": "student-certificate-blockchain",
+  "version": "1.0.0",
+  "description": "Student Certificate Validation Using Blockchain - Full-Stack Local Project",
+  "scripts": {
+    "chain": "cd blockchain && npx hardhat node",
+    "compile": "cd blockchain && npx hardhat compile",
+    "test:contract": "cd blockchain && npx hardhat test",
+    "deploy": "cd blockchain && npx hardhat run scripts/deploy.js --network localhost",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && node src/scripts/seed.js",
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test",
+    "test": "npm run test:contract && npm run test:server",
+    "install:all": "npm install && cd blockchain && npm install && cd ../server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
